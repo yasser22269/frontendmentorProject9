@@ -29,7 +29,7 @@ main{
     background-color: var(--Very-Dark-Blue) ;
     background-image: url("../images/bg-desktop.png");
     background-repeat: no-repeat;
-    background-size: initial;
+    background-size: contain;
     background-position-y: bottom;
 }
 .cards{
@@ -39,7 +39,7 @@ main{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     height: 100%;
     align-content: center;
 }
@@ -62,7 +62,7 @@ main{
 }
 .cards .card:first-child > img{
     margin-bottom: 26px;
-    width: 125px;
+    /* width: 125px; */
 }
 .cards .card:first-child .icons img{
     background-color: var(--Very-Dark-Blue) ;
