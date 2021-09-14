@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+}
+
+body {
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    font-family: 'Raleway', sans-serif;
+    --FontSize: 14px;
+    font-size: var(--FontSize);
+    color: #fff;
+}
+.center-text {
+    text-align: center;
+}
+
+main{
+    overflow: hidden;
+    position: relative;
+    padding: 66px;
+    height: 100vh;
+    background-color: var(--Very-Dark-Blue) ;
+    background-image: url("../images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position-y: bottom;
+}
+.cards{
+    gap: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    align-content: center;
+}
+.cards .card{
+    background-color: var( --Dark-Blue);
+    height: 190px;
+    width: 360px;
+    border-radius: 9px;
+}
+.cards .card:first-child{
+    border-top-right-radius: 76px;
+    padding-left: 40px;
+    padding-top: 35px;
+
+}
+.cards .card:last-child{
+    height: 143px;
+    width: 500px;
+    padding:35px 40px;
+}
+.cards .card:first-child > img{
+    margin-bottom: 26px;
+    width: 125px;
+}
+.cards .card:first-child .icons img{
+    background-color: var(--Very-Dark-Blue) ;
+    padding: 11px;
+    height: 40px;
+    border-radius: 7px;
+    margin-right: 10px;
+}
+
+.cards .card:last-child p{
+    color: var(--Grayish-Blue);
+    font-size: var(--FontSize);
+    margin-bottom: 20px;
+}
+.cards .card:last-child p strong{
+    color: var(--Pale-Blue);
+}
+.cards .card:last-child .prog {
+    background-color: var( --Very-Dark-Blue) ;
+    height: 19px;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+
+}
+.cards .card:last-child .prog span {
+    display: block;
+    background: linear-gradient(to top left,hsl(6, 100%, 80%) , hsl(335, 100%, 65%));
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    border-radius: 10px;
+    transform: translateY(-46%);
+}
+
+.cards .card:last-child .prog span::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 6px;
+    border-color: #fff;
+    right: 0px;
+    top: 0px;
+    border-radius: 50%;
+}
+
+.cards .card:last-child .gb span {
+    font-size: 10px;
+    color: var(--Pale-Blue);
+    margin-top: 9px;
+    font-weight: bold;
+}
+.cards .card:last-child .gb span:first-child{
+    float: left;
+}
+.cards .card:last-child .gb span.span-r{
+    float: right;
+}
+.cards .card:last-child .GBLeft {
+    color: #000;
+    background-color: #fff;
+    right: 0px;
+    padding: 20px;
+    top: 0px;
+    border-radius: 8px; 
+    position: absolute;
+    color: var(--Grayish-Blue);
+    background-color: #fff;
+    right: 44px;
+    top: -55px;
+    font-size: 15px;
+}
+.cards .card:last-child .GBLeft b{
+    font-size: 35px;
+    color: #000;
+}
+
+.cards .card:last-child .GBLeft::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 23px;
+    border-color: transparent #fff transparent transparent;
+    right: 0px;
+    bottom: -22px;
+  }
+
+/*   */
+@media (max-width: 1032px) {
+     main {
+        padding: 23px;
+    }
+     .card{
+        margin-bottom: 20px;
+    }
+    .cards .card:last-child .GBLeft {
+        top: initial;
+        border-radius: 8px;
+        position: absolute;
+        color: var(--Grayish-Blue);
+        background-color: #fff;
+        right: 50%;
+        bottom: -53px;
+        transform: translateX(50%);
+        font-size: 15px;
+        left: inherit;
+        padding: 12px;
+    }
+    .cards .card:last-child .GBLeft::after{
+        display:none;
+    }
+   
+}
+@media (max-width: 975px) {
+    .cards .card {
+        width: 100% !important;
+    }
+}
+@media (max-width: 375px) {
+    main{
+        background-image: url("../images/bg-mobile.png");
+    }
+    .cards .card:last-child .GBLeft {
+        bottom: -47px;
+        transform: translateX(50%);
+        font-size: 9px;
+        padding: 8px;
+    }
+   
+}
+
